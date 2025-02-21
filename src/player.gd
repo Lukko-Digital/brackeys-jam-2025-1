@@ -1,8 +1,7 @@
 extends CharacterBody2D
 class_name Player
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const MOVE_LERP_SPEED = 20
 
 @onready var movement_ray = %MovementRay
 
@@ -13,12 +12,18 @@ var INPUTS = {
 	"down": Vector2.DOWN
 }
 
+var target_position: Vector2
+
+func _process(delta):
+	if position != target_position:
+		position = position.lerp(target_position, MOVE_LERP_SPEED * delta)
+
 func move(dir: String):
 	movement_ray.target_position = INPUTS[dir] * Global.TILE_SIZE
 	movement_ray.force_raycast_update()
 
 	if !movement_ray.is_colliding():
-		position += INPUTS[dir] * Global.TILE_SIZE
+		target_position += INPUTS[dir] * Global.TILE_SIZE
 		# match dir:
 		# 	"up", "down":
 		# 		sprite.play(dir)
