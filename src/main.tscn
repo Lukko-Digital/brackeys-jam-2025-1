@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://p66eqnj8av28" path="res://assets/environment/floor-tileset.png" id="3_ewewc"]
 [ext_resource type="TileSet" uid="uid://b76syh2ohmwnl" path="res://src/tilesets/walkable_tileset.tres" id="3_xhxkg"]
 [ext_resource type="PackedScene" uid="uid://cww6s3tekv80" path="res://src/variable.tscn" id="4_0ltic"]
-[ext_resource type="PackedScene" uid="uid://b5u657gc8khdl" path="res://src/interactable_component.tscn" id="5_4k02u"]
+[ext_resource type="PackedScene" uid="uid://b5u657gc8khdl" path="res://src/dialogue/interactable_component.tscn" id="5_4k02u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_40t2f"]
 texture = ExtResource("3_ewewc")
