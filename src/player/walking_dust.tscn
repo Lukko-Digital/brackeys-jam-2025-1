@@ -1,0 +1,61 @@
+[gd_scene load_steps=11 format=3 uid="uid://ql8mb0d72o33"]
+
+[ext_resource type="Texture2D" uid="uid://c6wnar57cru8b" path="res://assets/player/spritesheets/dust.sprites/final-0031.tres" id="1_6nhuh"]
+[ext_resource type="Script" path="res://src/player/walking_dust.gd" id="1_f542d"]
+[ext_resource type="Texture2D" uid="uid://but3pq0rxhma2" path="res://assets/player/spritesheets/dust.sprites/final-0032.tres" id="2_8vie2"]
+[ext_resource type="Texture2D" uid="uid://mfp5hifp5bol" path="res://assets/player/spritesheets/dust.sprites/final-0033.tres" id="3_oot33"]
+[ext_resource type="Texture2D" uid="uid://bhl8q216bqqu6" path="res://assets/player/spritesheets/dust.sprites/final-0034.tres" id="4_2sw2k"]
+[ext_resource type="Texture2D" uid="uid://qq6l165tggup" path="res://assets/player/spritesheets/dust.sprites/final-0035.tres" id="5_e6sru"]
+[ext_resource type="Texture2D" uid="uid://dexa5fxwrq2ug" path="res://assets/player/spritesheets/dust.sprites/final-0036.tres" id="6_6g3ad"]
+[ext_resource type="Texture2D" uid="uid://bpa2ua0idkhh1" path="res://assets/player/spritesheets/dust.sprites/final-0037.tres" id="7_pq6qn"]
+[ext_resource type="Texture2D" uid="uid://b6vouxkaiq6k1" path="res://assets/player/spritesheets/dust.sprites/final-0038.tres" id="8_0ox4c"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gfv0f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6nhuh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8vie2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_oot33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2sw2k")
+}],
+"loop": false,
+"name": &"horizontal_dust",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_e6sru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6g3ad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pq6qn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0ox4c")
+}],
+"loop": false,
+"name": &"vertical_dust",
+"speed": 8.0
+}]
+
+[node name="Dust" type="Node2D"]
+script = ExtResource("1_f542d")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(9, 0)
+sprite_frames = SubResource("SpriteFrames_gfv0f")
+animation = &"horizontal_dust"
+frame = 3
+frame_progress = 1.0
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

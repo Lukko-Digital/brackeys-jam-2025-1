@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsdm7rn4ry00q"]
+
+[ext_resource type="Script" path="res://src/level_elements/level_code.gd" id="1_prf15"]
+
+[node name="LevelCode" type="RichTextLabel"]
+offset_left = -1721.0
+offset_top = -744.0
+offset_right = -722.0
+offset_bottom = 747.0
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+script = ExtResource("1_prf15")
+raw_code = "func startProgram() {
+
+	// I think we need one of these
+ // to start the game?
+
+ isStarted = true;
+ // should this be a local
+ // variable
+
+ // fuck this ian please
+ // double check
+
+ return isStarted;
+}"
+yellow_variable = "isStarted"
