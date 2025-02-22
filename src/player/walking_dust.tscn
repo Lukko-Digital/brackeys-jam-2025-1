@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://ql8mb0d72o33"]
+[gd_scene load_steps=11 format=3 uid="uid://ql8mb0d72o33"]
 
 [ext_resource type="Texture2D" uid="uid://c6wnar57cru8b" path="res://assets/player/spritesheets/dust.sprites/final-0031.tres" id="1_6nhuh"]
+[ext_resource type="Script" path="res://src/player/walking_dust.gd" id="1_f542d"]
 [ext_resource type="Texture2D" uid="uid://but3pq0rxhma2" path="res://assets/player/spritesheets/dust.sprites/final-0032.tres" id="2_8vie2"]
 [ext_resource type="Texture2D" uid="uid://mfp5hifp5bol" path="res://assets/player/spritesheets/dust.sprites/final-0033.tres" id="3_oot33"]
 [ext_resource type="Texture2D" uid="uid://bhl8q216bqqu6" path="res://assets/player/spritesheets/dust.sprites/final-0034.tres" id="4_2sw2k"]
@@ -47,10 +48,14 @@ animations = [{
 }]
 
 [node name="Dust" type="Node2D"]
+script = ExtResource("1_f542d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(9, 0)
 sprite_frames = SubResource("SpriteFrames_gfv0f")
 animation = &"horizontal_dust"
 frame = 3
 frame_progress = 1.0
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

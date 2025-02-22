@@ -9,6 +9,8 @@ const EYES_X_OFFSET = 15
 @onready var dialogue_ui: CanvasLayer = %DialogueUi
 @onready var eyes_sprite: AnimatedSprite2D = $PlayerEyes
 
+@onready var dust_scene = preload("res://src/player/walking_dust.tscn")
+
 var in_dialogue = false
 var buffered_input: String = ""
 
@@ -35,6 +37,26 @@ func move(dir: String) -> bool:
 	interact_ray.target_position = INPUTS[dir] * Global.TILE_SIZE
 	interact_ray.force_raycast_update()
 
+	animate_eyes(dir)
+	var moved = super(dir)
+	if moved:
+		walking_dust(dir)
+
+	return moved
+
+func move_input(dir: String):
+	if in_dialogue:
+		return
+		
+	coyote_timer.start()
+	buffered_input = dir
+
+	if not is_moving:
+		move(dir)
+
+## ------------------ ANIMATION ------------------
+
+func animate_eyes(dir: String):
 	match dir:
 		"up":
 			eyes_sprite.play("up")
@@ -49,19 +71,13 @@ func move(dir: String) -> bool:
 			eyes_sprite.flip_h = false
 			eyes_sprite.offset.x = EYES_X_OFFSET
 
-	return super(dir)
+func walking_dust(dir: String):
+	var dust = dust_scene.instantiate()
+	dust.global_position = global_position
+	get_parent().add_child(dust)
+	dust.play_animation(dir)
 
-func move_input(dir: String):
-	if in_dialogue:
-		return
-		
-	coyote_timer.start()
-	buffered_input = dir
-
-	if not is_moving:
-		move(dir)
-
-## ------------------ MOVEMENT ------------------
+## ------------------ DIALOGUE ------------------
 
 func interact_pressed():
 	if in_dialogue:
