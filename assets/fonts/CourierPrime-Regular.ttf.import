@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cyser73s2g11r"
-path="res://.godot/imported/CutiveMono-Regular.ttf-bb217520bdf0de46c96c0341b63edadf.fontdata"
+uid="uid://fefrpsn8tt06"
+path="res://.godot/imported/CourierPrime-Regular.ttf-54402e9929ac5857dac75d764efd223b.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/CutiveMono-Regular.ttf"
-dest_files=["res://.godot/imported/CutiveMono-Regular.ttf-bb217520bdf0de46c96c0341b63edadf.fontdata"]
+source_file="res://assets/fonts/CourierPrime-Regular.ttf"
+dest_files=["res://.godot/imported/CourierPrime-Regular.ttf-54402e9929ac5857dac75d764efd223b.fontdata"]
 
 [params]
 
