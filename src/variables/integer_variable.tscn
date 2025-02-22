@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://hft450rf86d7"]
+
+[ext_resource type="PackedScene" uid="uid://cqclrtr33c78n" path="res://src/moveable.tscn" id="1_8w2qr"]
+[ext_resource type="Script" path="res://src/variables/integer_variable.gd" id="2_dl1nd"]
+[ext_resource type="Texture2D" uid="uid://chva80djaftd3" path="res://icon.svg" id="2_rgn16"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tf1me"]
+size = Vector2(180, 180)
+
+[node name="IntegerVariable" instance=ExtResource("1_8w2qr")]
+script = ExtResource("2_dl1nd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_tf1me")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="2"]
+texture = ExtResource("2_rgn16")
+
+[node name="Label" type="Label" parent="." index="3"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1

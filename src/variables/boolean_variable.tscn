@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://dasp8fxadwybx"]
+
+[ext_resource type="PackedScene" uid="uid://cqclrtr33c78n" path="res://src/moveable.tscn" id="1_t1stv"]
+[ext_resource type="Script" path="res://src/variables/boolean_variable.gd" id="2_6qovb"]
+[ext_resource type="Texture2D" uid="uid://chva80djaftd3" path="res://icon.svg" id="2_nilki"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tjdqe"]
+size = Vector2(180, 180)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lyvsu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nilki")
+}],
+"loop": true,
+"name": &"false",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nilki")
+}],
+"loop": true,
+"name": &"true",
+"speed": 5.0
+}]
+
+[node name="BooleanVariable" instance=ExtResource("1_t1stv")]
+script = ExtResource("2_6qovb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_tjdqe")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="2"]
+sprite_frames = SubResource("SpriteFrames_lyvsu")
+animation = &"false"

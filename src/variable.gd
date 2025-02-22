@@ -1,2 +1,0 @@
-extends Moveable
-class_name Variable
