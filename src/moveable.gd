@@ -15,19 +15,25 @@ var INPUTS = {
 }
 
 var target_position: Vector2
-
+var is_moving: bool
 
 func _ready() -> void:
 	target_position = position
 
 
 func _process(delta):
-	if is_moving():
+	if is_moving:
 		position = position.lerp(target_position, MOVE_LERP_SPEED * delta)
+		check_destination_reached()
 
 
-func is_moving() -> bool:
-	return abs(position.distance_to(target_position)) > MOVE_DISTANCE_THRESHOLD
+func check_destination_reached():
+	if abs(position.distance_to(target_position)) < MOVE_DISTANCE_THRESHOLD:
+		movement_ended()
+
+
+func movement_ended():
+	is_moving = false
 
 
 func move(dir: String) -> bool:
@@ -44,7 +50,9 @@ func move(dir: String) -> bool:
 			return false
 	
 	target_position += INPUTS[dir] * Global.TILE_SIZE
+	is_moving = true
 	return true
+
 
 func is_walkable(dir: String) -> bool:
 	var space = get_world_2d().direct_space_state
