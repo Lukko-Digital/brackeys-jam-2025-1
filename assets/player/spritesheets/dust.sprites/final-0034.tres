@@ -1,0 +1,8 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://bhl8q216bqqu6"]
+
+[ext_resource type="Texture2D" uid="uid://dpqdvdros30x3" path="res://assets/player/spritesheets/dust.png" id="1_o6r4r"]
+
+[resource]
+atlas = ExtResource("1_o6r4r")
+region = Rect2(1, 385, 75, 28)
+margin = Rect2(193, 263, 525, 572)

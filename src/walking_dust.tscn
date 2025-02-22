@@ -1,0 +1,55 @@
+[gd_scene load_steps=10 format=3 uid="uid://b8x3dccbv42rj"]
+
+[ext_resource type="Texture2D" uid="uid://c6wnar57cru8b" path="res://assets/player/spritesheets/dust.sprites/final-0031.tres" id="1_834ri"]
+[ext_resource type="Texture2D" uid="uid://but3pq0rxhma2" path="res://assets/player/spritesheets/dust.sprites/final-0032.tres" id="2_tro10"]
+[ext_resource type="Texture2D" uid="uid://mfp5hifp5bol" path="res://assets/player/spritesheets/dust.sprites/final-0033.tres" id="3_7luh3"]
+[ext_resource type="Texture2D" uid="uid://bhl8q216bqqu6" path="res://assets/player/spritesheets/dust.sprites/final-0034.tres" id="4_pbamp"]
+[ext_resource type="Texture2D" uid="uid://qq6l165tggup" path="res://assets/player/spritesheets/dust.sprites/final-0035.tres" id="5_fffpj"]
+[ext_resource type="Texture2D" uid="uid://dexa5fxwrq2ug" path="res://assets/player/spritesheets/dust.sprites/final-0036.tres" id="6_s85sx"]
+[ext_resource type="Texture2D" uid="uid://bpa2ua0idkhh1" path="res://assets/player/spritesheets/dust.sprites/final-0037.tres" id="7_atpa4"]
+[ext_resource type="Texture2D" uid="uid://b6vouxkaiq6k1" path="res://assets/player/spritesheets/dust.sprites/final-0038.tres" id="8_780dw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gfv0f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_834ri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_tro10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7luh3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pbamp")
+}],
+"loop": true,
+"name": &"horizontal_dust",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_fffpj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_s85sx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_atpa4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_780dw")
+}],
+"loop": true,
+"name": &"vertical_dust",
+"speed": 8.0
+}]
+
+[node name="Dust" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(9, 0)
+sprite_frames = SubResource("SpriteFrames_gfv0f")
+animation = &"vertical_dust"
+frame_progress = 0.363526

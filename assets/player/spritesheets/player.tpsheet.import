@@ -1,0 +1,16 @@
+[remap]
+
+importer="codeandweb.texturepacker_import_spritesheet"
+type="Resource"
+uid="uid://bssaj3vdib220"
+path="res://.godot/imported/player.tpsheet-862e8b21f807c8fa0f57ec2b34594468.res"
+
+[deps]
+
+files=["res://assets/player/spritesheets/player.sprites/final-0003.tres", "res://assets/player/spritesheets/player.sprites/final-0010.tres", "res://assets/player/spritesheets/player.sprites/final-0017.tres", "res://assets/player/spritesheets/player.sprites/final-0004.tres", "res://assets/player/spritesheets/player.sprites/final-0011.tres", "res://assets/player/spritesheets/player.sprites/final-0018.tres", "res://assets/player/spritesheets/player.sprites/final-0007.tres", "res://assets/player/spritesheets/player.sprites/final-0014.tres", "res://assets/player/spritesheets/player.sprites/final-0021.tres", "res://assets/player/spritesheets/player.sprites/final-0001.tres", "res://assets/player/spritesheets/player.sprites/final-0008.tres", "res://assets/player/spritesheets/player.sprites/final-0015.tres", "res://assets/player/spritesheets/player.sprites/final-0002.tres", "res://assets/player/spritesheets/player.sprites/final-0005.tres", "res://assets/player/spritesheets/player.sprites/final-0009.tres", "res://assets/player/spritesheets/player.sprites/final-0012.tres", "res://assets/player/spritesheets/player.sprites/final-0016.tres", "res://assets/player/spritesheets/player.sprites/final-0019.tres", "res://assets/player/spritesheets/player.sprites/final-0006.tres", "res://assets/player/spritesheets/player.sprites/final-0013.tres", "res://assets/player/spritesheets/player.sprites/final-0020.tres"]
+
+source_file="res://assets/player/spritesheets/player.tpsheet"
+dest_files=["res://.godot/imported/player.tpsheet-862e8b21f807c8fa0f57ec2b34594468.res", "res://assets/player/spritesheets/player.sprites/final-0003.tres", "res://assets/player/spritesheets/player.sprites/final-0010.tres", "res://assets/player/spritesheets/player.sprites/final-0017.tres", "res://assets/player/spritesheets/player.sprites/final-0004.tres", "res://assets/player/spritesheets/player.sprites/final-0011.tres", "res://assets/player/spritesheets/player.sprites/final-0018.tres", "res://assets/player/spritesheets/player.sprites/final-0007.tres", "res://assets/player/spritesheets/player.sprites/final-0014.tres", "res://assets/player/spritesheets/player.sprites/final-0021.tres", "res://assets/player/spritesheets/player.sprites/final-0001.tres", "res://assets/player/spritesheets/player.sprites/final-0008.tres", "res://assets/player/spritesheets/player.sprites/final-0015.tres", "res://assets/player/spritesheets/player.sprites/final-0002.tres", "res://assets/player/spritesheets/player.sprites/final-0005.tres", "res://assets/player/spritesheets/player.sprites/final-0009.tres", "res://assets/player/spritesheets/player.sprites/final-0012.tres", "res://assets/player/spritesheets/player.sprites/final-0016.tres", "res://assets/player/spritesheets/player.sprites/final-0019.tres", "res://assets/player/spritesheets/player.sprites/final-0006.tres", "res://assets/player/spritesheets/player.sprites/final-0013.tres", "res://assets/player/spritesheets/player.sprites/final-0020.tres"]
+
+[params]
+
