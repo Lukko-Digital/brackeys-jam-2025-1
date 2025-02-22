@@ -1,10 +1,37 @@
-[gd_scene load_steps=8 format=4 uid="uid://v2ewo3rlxyb0"]
+[gd_scene load_steps=18 format=4 uid="uid://v2ewo3rlxyb0"]
 
+[ext_resource type="Texture2D" uid="uid://dlqw0qw6xep5s" path="res://assets/environment/floor-inset-tileset.png" id="1_871uy"]
+[ext_resource type="Texture2D" uid="uid://cb06m6x1ilaif" path="res://assets/environment/bg.png" id="1_pi5ho"]
 [ext_resource type="PackedScene" uid="uid://jqd3vdbka4dr" path="res://src/player.tscn" id="1_x5b67"]
 [ext_resource type="Texture2D" uid="uid://p66eqnj8av28" path="res://assets/environment/floor-tileset.png" id="3_ewewc"]
 [ext_resource type="TileSet" uid="uid://b76syh2ohmwnl" path="res://src/tilesets/walkable_tileset.tres" id="3_xhxkg"]
 [ext_resource type="PackedScene" path="res://src/variable.tscn" id="4_0ltic"]
+[ext_resource type="Texture2D" uid="uid://depcwlocbww81" path="res://assets/environment/screen-tileset.png" id="4_v7g2x"]
 [ext_resource type="PackedScene" uid="uid://b5u657gc8khdl" path="res://src/dialogue/interactable_component.tscn" id="5_4k02u"]
+[ext_resource type="Texture2D" uid="uid://3phhvb4dx0wr" path="res://assets/environment/screen-topper-tileset.png" id="5_plc5o"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d8lun"]
+texture = ExtResource("1_871uy")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_sdq3l"]
+tile_size = Vector2i(256, 256)
+sources/1 = SubResource("TileSetAtlasSource_d8lun")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_40t2f"]
 texture = ExtResource("3_ewewc")
@@ -30,7 +57,38 @@ texture_region_size = Vector2i(256, 256)
 tile_size = Vector2i(256, 256)
 sources/0 = SubResource("TileSetAtlasSource_40t2f")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m7sg7"]
+texture = ExtResource("4_v7g2x")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_13qfq"]
+tile_size = Vector2i(256, 256)
+sources/1 = SubResource("TileSetAtlasSource_m7sg7")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8knm8"]
+texture = ExtResource("5_plc5o")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+2:0/0 = 0
+1:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_31w4f"]
+tile_size = Vector2i(256, 256)
+sources/0 = SubResource("TileSetAtlasSource_8knm8")
+
 [node name="Main" type="Node2D"]
+
+[node name="Bg" type="Sprite2D" parent="."]
+texture = ExtResource("1_pi5ho")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.5, 0.5)
@@ -38,16 +96,46 @@ zoom = Vector2(0.5, 0.5)
 [node name="Level" type="Node2D" parent="."]
 position = Vector2(256, 256)
 
-[node name="Floor" type="TileMapLayer" parent="Level"]
+[node name="Playable" type="Node2D" parent="Level"]
+position = Vector2(768, 0)
+
+[node name="Floor-Inset" type="TileMapLayer" parent="Level/Playable"]
+position = Vector2(0, 57.37)
+tile_map_data = PackedByteArray("AAAAAAEAAQADAAMAAAD//wEAAQABAAIAAAD+/wEAAQABAAIAAAD9/wEAAQAAAAIAAAD8/wAAAQAAAAIAAAACAP//AQADAAMAAAABAP//AQAAAAIAAAABAP7/AQACAAIAAAAAAP7/AQADAAEAAAD9/wAAAQACAAIAAAA=")
+tile_set = SubResource("TileSet_sdq3l")
+
+[node name="Floor" type="TileMapLayer" parent="Level/Playable"]
 tile_map_data = PackedByteArray("AAD/////AAACAAEAAAD+////AAACAAEAAAD+//7/AAACAAEAAAD///7/AAACAAEAAAD+//3/AAACAAEAAAD///3/AAACAAEAAAAAAP3/AAACAAEAAAD+/wAAAAACAAEAAAD//wAAAAACAAEAAAD9////AAACAAEAAAAAAAEAAAADAAMAAAACAP//AAADAAMAAAD9/wEAAAAAAAIAAAD8/wAAAAAAAAIAAAABAPz/AAAAAAAAAAACAP3/AAAAAAAAAAD9//z/AAABAAMAAAD9/wAAAAACAAIAAAD+/wEAAAABAAIAAAD//wEAAAABAAIAAAAAAAAAAAADAAIAAAAAAP//AAADAAIAAAAAAP7/AAADAAEAAAABAP7/AAACAAIAAAABAP//AAAAAAIAAAACAP7/AAADAAIAAAABAP3/AAACAAAAAAAAAPz/AAADAAAAAAD///z/AAADAAAAAAD+//z/AAADAAAAAAD9//3/AAABAAAAAAD9//7/AAABAAEAAAD8//7/AAABAAMAAAD8////AAABAAAAAAA=")
 tile_set = SubResource("TileSet_hs4nt")
 
-[node name="Walkable" type="TileMapLayer" parent="Level"]
+[node name="Walkable" type="TileMapLayer" parent="Level/Playable"]
 position = Vector2(-128, -128)
 tile_map_data = PackedByteArray("AAAAAP//AAABAAEAAAAAAAAAAAACAAEAAAD//wAAAAACAAIAAAD/////AAAAAAEAAAD+/wAAAAACAAIAAAD+////AAABAAIAAAAAAAEAAAABAAMAAAD//wEAAAABAAEAAAD+/wEAAAAAAAEAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAACAP//AAABAAIAAAD9////AAAAAAIAAAD+//7/AAACAAEAAAABAP7/AAAAAAMAAAACAP7/AAACAAEAAAAAAP3/AAACAAEAAAD///3/AAACAAIAAAD+//3/AAABAAMAAAD9/wAAAAAAAAMAAAABAP3/AAAAAAIAAAA=")
 tile_set = ExtResource("3_xhxkg")
 
+[node name="Screen2" type="Node2D" parent="Level"]
+
+[node name="Floor-Inset" type="TileMapLayer" parent="Level/Screen2"]
+position = Vector2(0, 68.05)
+tile_map_data = PackedByteArray("AAD5/wEAAQABAAIAAAD6/wEAAQABAAIAAAD7/wEAAQABAAIAAAD8/wEAAQABAAIAAAD4/wEAAQAAAAIAAAD9/wEAAQADAAMAAAA=")
+tile_set = SubResource("TileSet_sdq3l")
+
+[node name="ScreenFloor" type="TileMapLayer" parent="Level/Screen2"]
+tile_map_data = PackedByteArray("AAD5//3/AAACAAEAAAD5//7/AAACAAEAAAD5////AAACAAEAAAD5/wAAAAACAAEAAAD6/wAAAAACAAEAAAD6////AAACAAEAAAD6//7/AAACAAEAAAD6//3/AAACAAEAAAD4/wEAAAAAAAIAAAD5/wEAAAABAAIAAAD6/wEAAAABAAIAAAD7/wEAAAABAAIAAAD7/wAAAAACAAEAAAD7////AAACAAEAAAD7//7/AAACAAEAAAD7//3/AAACAAEAAAD7//z/AAACAAEAAAD6//z/AAACAAEAAAD5//z/AAACAAEAAAD4//z/AAABAAAAAAD4//3/AAABAAAAAAD4//7/AAABAAAAAAD4////AAABAAAAAAD4/wAAAAABAAAAAAD8//z/AAACAAEAAAD8//3/AAACAAEAAAD8//7/AAACAAEAAAD8////AAACAAEAAAD8/wAAAAACAAEAAAD8/wEAAAABAAIAAAD9//z/AAADAAIAAAD9//3/AAADAAIAAAD9//7/AAADAAIAAAD9////AAADAAIAAAD9/wAAAAADAAIAAAD9/wEAAAADAAMAAAD4//v/AAABAAMAAAD5//v/AAADAAAAAAD6//v/AAADAAAAAAD7//v/AAADAAAAAAD8//v/AAADAAAAAAD9//v/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_hs4nt")
+
+[node name="Screen" type="TileMapLayer" parent="Level/Screen2"]
+position = Vector2(-128, -128)
+tile_map_data = PackedByteArray("AAD5/wEAAQAAAAIAAAD5/wAAAQAAAAEAAAD6/wAAAQABAAEAAAD8/wAAAQABAAEAAAD7/wAAAQABAAEAAAD6/wEAAQABAAIAAAD7/wEAAQABAAIAAAD8/wEAAQABAAIAAAD9/wEAAQACAAIAAAD9/wAAAQACAAEAAAD5//3/AQAAAAEAAAD5//7/AQAAAAEAAAD6//3/AQABAAEAAAD6//7/AQABAAEAAAD7//3/AQABAAEAAAD7//7/AQABAAEAAAD8//3/AQABAAEAAAD8//7/AQABAAEAAAD9//3/AQACAAEAAAD9//7/AQACAAEAAAD5//z/AQAAAAAAAAD6//z/AQABAAAAAAD7//z/AQABAAAAAAD8//z/AQABAAAAAAD9//z/AQACAAAAAAD7////AQABAAEAAAD6////AQABAAEAAAD8////AQABAAEAAAD9////AQACAAEAAAD5////AQAAAAEAAAA=")
+tile_set = SubResource("TileSet_13qfq")
+
+[node name="ScreenTopper" type="TileMapLayer" parent="Level/Screen2"]
+position = Vector2(-128, -128)
+tile_map_data = PackedByteArray("AAD5//z/AAAAAAAAAAD6//z/AAABAAAAAAD7//z/AAABAAAAAAD8//z/AAABAAAAAAD9//z/AAACAAAAAAA=")
+tile_set = SubResource("TileSet_31w4f")
+
 [node name="Player" parent="." instance=ExtResource("1_x5b67")]
+position = Vector2(768, 0)
 collision_layer = 1
 
 [node name="Variable2" parent="." instance=ExtResource("4_0ltic")]

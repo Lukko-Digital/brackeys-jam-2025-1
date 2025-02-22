@@ -152,7 +152,7 @@ position = Vector2(15, 0)
 sprite_frames = SubResource("SpriteFrames_l2ibq")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.165687
+frame_progress = 0.777237
 
 [node name="PlayerGlow" type="Sprite2D" parent="." index="7"]
 modulate = Color(1, 1, 1, 0.505882)
@@ -165,4 +165,4 @@ position = Vector2(15, 0)
 sprite_frames = SubResource("SpriteFrames_bonjs")
 animation = &"down"
 autoplay = "down"
-frame_progress = 0.29928
+frame_progress = 0.91083
