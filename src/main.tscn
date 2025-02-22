@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://v2ewo3rlxyb0"]
+[gd_scene load_steps=8 format=4 uid="uid://v2ewo3rlxyb0"]
 
 [ext_resource type="PackedScene" uid="uid://jqd3vdbka4dr" path="res://src/player.tscn" id="1_x5b67"]
 [ext_resource type="Texture2D" uid="uid://p66eqnj8av28" path="res://assets/environment/floor-tileset.png" id="3_ewewc"]
 [ext_resource type="TileSet" uid="uid://b76syh2ohmwnl" path="res://src/tilesets/walkable_tileset.tres" id="3_xhxkg"]
 [ext_resource type="PackedScene" uid="uid://cww6s3tekv80" path="res://src/variable.tscn" id="4_0ltic"]
+[ext_resource type="PackedScene" uid="uid://b5u657gc8khdl" path="res://src/interactable_component.tscn" id="5_4k02u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_40t2f"]
 texture = ExtResource("3_ewewc")
@@ -49,11 +50,10 @@ tile_set = ExtResource("3_xhxkg")
 [node name="Player" parent="." instance=ExtResource("1_x5b67")]
 collision_layer = 1
 
-[node name="Variable" parent="." instance=ExtResource("4_0ltic")]
-position = Vector2(512, 0)
-
 [node name="Variable2" parent="." instance=ExtResource("4_0ltic")]
 position = Vector2(0, 256)
 
-[node name="Variable3" parent="." instance=ExtResource("4_0ltic")]
-position = Vector2(1024, 0)
+[node name="InteractableComponent" parent="Variable2" instance=ExtResource("5_4k02u")]
+dialogue_text = "the weather outside is rizzy
+
+but the fire is so skibidi"
