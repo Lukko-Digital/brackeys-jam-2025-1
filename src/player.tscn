@@ -152,7 +152,7 @@ position = Vector2(15, 0)
 sprite_frames = SubResource("SpriteFrames_l2ibq")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.165687
+frame_progress = 0.718217
 
 [node name="PlayerGlow" type="Sprite2D" parent="." index="7"]
 modulate = Color(1, 1, 1, 0.505882)
@@ -161,8 +161,9 @@ scale = Vector2(0.872289, 0.872289)
 texture = ExtResource("5_my7js")
 
 [node name="PlayerEyes" type="AnimatedSprite2D" parent="." index="8"]
-position = Vector2(15, 0)
+unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_bonjs")
-animation = &"down"
+animation = &"right"
 autoplay = "down"
-frame_progress = 0.29928
+frame_progress = 0.592046
+offset = Vector2(15, 0)

@@ -2,10 +2,12 @@ extends Moveable
 class_name Player
 
 const COYOTE_TIME = 0.1
+const EYES_X_OFFSET = 15
 
 @onready var interact_ray: RayCast2D = %InteractRay
 @onready var coyote_timer: Timer = %CoyoteTimer
 @onready var dialogue_ui: CanvasLayer = %DialogueUi
+@onready var eyes_sprite: AnimatedSprite2D = $PlayerEyes
 
 var in_dialogue = false
 var buffered_input: String = ""
@@ -32,6 +34,21 @@ func movement_ended():
 func move(dir: String) -> bool:
 	interact_ray.target_position = INPUTS[dir] * Global.TILE_SIZE
 	interact_ray.force_raycast_update()
+
+	match dir:
+		"up":
+			eyes_sprite.play("up")
+		"down":
+			eyes_sprite.play("down")
+		"left":
+			eyes_sprite.play("right")
+			eyes_sprite.flip_h = true
+			eyes_sprite.offset.x = - EYES_X_OFFSET
+		"right":
+			eyes_sprite.play("right")
+			eyes_sprite.flip_h = false
+			eyes_sprite.offset.x = EYES_X_OFFSET
+
 	return super(dir)
 
 func move_input(dir: String):
