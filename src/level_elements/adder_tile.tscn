@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba4m65cx8wq6w"]
+
+[ext_resource type="Texture2D" uid="uid://b0hidg5vod6l" path="res://assets/environment/walkable-tileset.png" id="1_iyuxt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2p1s"]
+size = Vector2(256, 256)
+
+[node name="AdderTile" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_m2p1s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_iyuxt")
+hframes = 4
+vframes = 7
+frame = 2
