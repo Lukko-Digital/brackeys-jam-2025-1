@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dsdm7rn4ry00q"]
 
 [ext_resource type="FontFile" uid="uid://fefrpsn8tt06" path="res://assets/fonts/CourierPrime-Regular.ttf" id="1_5tn5b"]
-[ext_resource type="Script" path="res://src/level_elements/level_code.gd" id="1_prf15"]
+[ext_resource type="Script" path="res://src/level_elements/level_code_label.gd" id="1_prf15"]
 [ext_resource type="FontFile" uid="uid://dxubynnysttya" path="res://assets/fonts/CourierPrime-Italic.ttf" id="2_6lvpo"]
 [ext_resource type="FontFile" uid="uid://tj10pbt23bm4" path="res://assets/fonts/CourierPrime-BoldItalic.ttf" id="3_cwxue"]
 [ext_resource type="FontFile" uid="uid://of6ks7jj2ut8" path="res://assets/fonts/CourierPrime-Bold.ttf" id="4_1kepl"]

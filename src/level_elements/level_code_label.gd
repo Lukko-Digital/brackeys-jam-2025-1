@@ -1,6 +1,6 @@
 @tool
 extends RichTextLabel
-class_name LevelCode
+class_name LevelCodeLabel
 
 @export_multiline var raw_code: String:
 	set(str):
