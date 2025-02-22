@@ -1,0 +1,16 @@
+[remap]
+
+importer="codeandweb.texturepacker_import_spritesheet"
+type="Resource"
+uid="uid://juc0ihgq7aax"
+path="res://.godot/imported/dust.tpsheet-fb1002a410d70e6fde0ec85e02ef5084.res"
+
+[deps]
+
+files=["res://assets/player/spritesheets/dust.sprites/final-0031.tres", "res://assets/player/spritesheets/dust.sprites/final-0032.tres", "res://assets/player/spritesheets/dust.sprites/final-0033.tres", "res://assets/player/spritesheets/dust.sprites/final-0034.tres", "res://assets/player/spritesheets/dust.sprites/final-0035.tres", "res://assets/player/spritesheets/dust.sprites/final-0036.tres", "res://assets/player/spritesheets/dust.sprites/final-0037.tres", "res://assets/player/spritesheets/dust.sprites/final-0038.tres"]
+
+source_file="res://assets/player/spritesheets/dust.tpsheet"
+dest_files=["res://.godot/imported/dust.tpsheet-fb1002a410d70e6fde0ec85e02ef5084.res", "res://assets/player/spritesheets/dust.sprites/final-0031.tres", "res://assets/player/spritesheets/dust.sprites/final-0032.tres", "res://assets/player/spritesheets/dust.sprites/final-0033.tres", "res://assets/player/spritesheets/dust.sprites/final-0034.tres", "res://assets/player/spritesheets/dust.sprites/final-0035.tres", "res://assets/player/spritesheets/dust.sprites/final-0036.tres", "res://assets/player/spritesheets/dust.sprites/final-0037.tres", "res://assets/player/spritesheets/dust.sprites/final-0038.tres"]
+
+[params]
+

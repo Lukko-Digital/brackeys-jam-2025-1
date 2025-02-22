@@ -1,0 +1,333 @@
+{
+	"textures": [
+		{
+			"image": "player_eyes.png",
+			"size": {
+				"w": 256,
+				"h": 500
+			},
+			"sprites": [
+				{
+					"filename": "final-0015.png",
+					"region": {
+						"x": 1,
+						"y": 1,
+						"w": 3,
+						"h": 3
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 597,
+						"h": 597
+					}
+				},
+				{
+					"filename": "final-0016.png",
+					"region": {
+						"x": 6,
+						"y": 1,
+						"w": 3,
+						"h": 3
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 597,
+						"h": 597
+					}
+				},
+				{
+					"filename": "final-0017.png",
+					"region": {
+						"x": 11,
+						"y": 1,
+						"w": 3,
+						"h": 3
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 597,
+						"h": 597
+					}
+				},
+				{
+					"filename": "final-0018.png",
+					"region": {
+						"x": 16,
+						"y": 1,
+						"w": 3,
+						"h": 3
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 597,
+						"h": 597
+					}
+				},
+				{
+					"filename": "final-0019.png",
+					"region": {
+						"x": 21,
+						"y": 1,
+						"w": 3,
+						"h": 3
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 597,
+						"h": 597
+					}
+				},
+				{
+					"filename": "final-0020.png",
+					"region": {
+						"x": 26,
+						"y": 1,
+						"w": 3,
+						"h": 3
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 597,
+						"h": 597
+					}
+				},
+				{
+					"filename": "final-0021.png",
+					"region": {
+						"x": 31,
+						"y": 1,
+						"w": 3,
+						"h": 3
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 597,
+						"h": 597
+					}
+				},
+				{
+					"filename": "final-0004.png",
+					"region": {
+						"x": 36,
+						"y": 1,
+						"w": 140,
+						"h": 32
+					},
+					"margin": {
+						"x": 214,
+						"y": 293,
+						"w": 460,
+						"h": 568
+					}
+				},
+				{
+					"filename": "final-0002.png",
+					"region": {
+						"x": 1,
+						"y": 35,
+						"w": 143,
+						"h": 36
+					},
+					"margin": {
+						"x": 213,
+						"y": 291,
+						"w": 457,
+						"h": 564
+					}
+				},
+				{
+					"filename": "final-0003.png",
+					"region": {
+						"x": 1,
+						"y": 73,
+						"w": 142,
+						"h": 36
+					},
+					"margin": {
+						"x": 214,
+						"y": 290,
+						"w": 458,
+						"h": 564
+					}
+				},
+				{
+					"filename": "final-0007.png",
+					"region": {
+						"x": 1,
+						"y": 111,
+						"w": 142,
+						"h": 36
+					},
+					"margin": {
+						"x": 212,
+						"y": 292,
+						"w": 458,
+						"h": 564
+					}
+				},
+				{
+					"filename": "final-0006.png",
+					"region": {
+						"x": 1,
+						"y": 149,
+						"w": 141,
+						"h": 38
+					},
+					"margin": {
+						"x": 212,
+						"y": 291,
+						"w": 459,
+						"h": 562
+					}
+				},
+				{
+					"filename": "final-0001.png",
+					"region": {
+						"x": 1,
+						"y": 189,
+						"w": 140,
+						"h": 39
+					},
+					"margin": {
+						"x": 212,
+						"y": 291,
+						"w": 460,
+						"h": 561
+					}
+				},
+				{
+					"filename": "final-0005.png",
+					"region": {
+						"x": 1,
+						"y": 230,
+						"w": 140,
+						"h": 39
+					},
+					"margin": {
+						"x": 212,
+						"y": 291,
+						"w": 460,
+						"h": 561
+					}
+				},
+				{
+					"filename": "final-0008.png",
+					"region": {
+						"x": 1,
+						"y": 271,
+						"w": 163,
+						"h": 106
+					},
+					"margin": {
+						"x": 209,
+						"y": 235,
+						"w": 437,
+						"h": 494
+					}
+				},
+				{
+					"filename": "final-0009.png",
+					"region": {
+						"x": 166,
+						"y": 271,
+						"w": 48,
+						"h": 108
+					},
+					"margin": {
+						"x": 324,
+						"y": 229,
+						"w": 552,
+						"h": 492
+					}
+				},
+				{
+					"filename": "final-0010.png",
+					"region": {
+						"x": 1,
+						"y": 381,
+						"w": 46,
+						"h": 113
+					},
+					"margin": {
+						"x": 322,
+						"y": 226,
+						"w": 554,
+						"h": 487
+					}
+				},
+				{
+					"filename": "final-0014.png",
+					"region": {
+						"x": 49,
+						"y": 381,
+						"w": 49,
+						"h": 114
+					},
+					"margin": {
+						"x": 321,
+						"y": 229,
+						"w": 551,
+						"h": 486
+					}
+				},
+				{
+					"filename": "final-0011.png",
+					"region": {
+						"x": 100,
+						"y": 381,
+						"w": 49,
+						"h": 115
+					},
+					"margin": {
+						"x": 321,
+						"y": 223,
+						"w": 551,
+						"h": 485
+					}
+				},
+				{
+					"filename": "final-0012.png",
+					"region": {
+						"x": 151,
+						"y": 381,
+						"w": 55,
+						"h": 115
+					},
+					"margin": {
+						"x": 321,
+						"y": 227,
+						"w": 545,
+						"h": 485
+					}
+				},
+				{
+					"filename": "final-0013.png",
+					"region": {
+						"x": 208,
+						"y": 381,
+						"w": 47,
+						"h": 118
+					},
+					"margin": {
+						"x": 321,
+						"y": 227,
+						"w": 553,
+						"h": 482
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:c9cfb36d007270526280f55604eaa86d:dd18399673d6f1b95a6b1e85ef922c82:eaa855d7a210a5257737b6ea1d0fb33d$"
+	}
+}
