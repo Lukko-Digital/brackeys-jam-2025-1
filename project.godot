@@ -50,7 +50,7 @@ right={
 
 [layer_names]
 
-2d_physics/layer_1="TERRAIN"
+2d_physics/layer_1="WALKABLE"
 2d_physics/layer_2="MOVEABLES"
 
 [rendering]
