@@ -4,7 +4,7 @@ class_name InteractableComponent
 @export_file("*.txt") var dialogue_file
 @export_multiline var dialogue_text: String
 
-var dialogue_lines: Array[String]
+var dialogue_lines: Array
 
 func _ready() -> void:
 	load_dialogue()

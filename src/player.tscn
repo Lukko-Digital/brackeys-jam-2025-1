@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://jqd3vdbka4dr"]
+[gd_scene load_steps=6 format=3 uid="uid://jqd3vdbka4dr"]
 
 [ext_resource type="PackedScene" uid="uid://cqclrtr33c78n" path="res://src/moveable.tscn" id="1_ccr6s"]
 [ext_resource type="Texture2D" uid="uid://qctlu1fnqqa1" path="res://assets/temp/player.png" id="1_qlaae"]
 [ext_resource type="Script" path="res://src/player.gd" id="1_t7p4v"]
+[ext_resource type="PackedScene" uid="uid://driivbwjwqlio" path="res://src/dialogue_ui.tscn" id="4_2pq27"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2urb"]
 size = Vector2(168, 174)
@@ -27,3 +28,6 @@ texture = ExtResource("1_qlaae")
 [node name="CoyoteTimer" type="Timer" parent="." index="4"]
 unique_name_in_owner = true
 one_shot = true
+
+[node name="DialogueUi" parent="." index="5" instance=ExtResource("4_2pq27")]
+unique_name_in_owner = true
