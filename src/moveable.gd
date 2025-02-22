@@ -6,7 +6,6 @@ const MOVE_LERP_SPEED = 20
 const MOVE_DISTANCE_THRESHOLD = 2
 
 @onready var push_ray: RayCast2D = %PushRay
-@onready var walkable_ray: RayCast2D = %WalkableRay
 
 var INPUTS = {
 	"right": Vector2.RIGHT,
@@ -34,7 +33,7 @@ func is_moving() -> bool:
 func move(dir: String) -> bool:
 	push_ray.target_position = INPUTS[dir] * Global.TILE_SIZE
 	push_ray.force_raycast_update()
-	
+
 	if !is_walkable(dir):
 		return false
 
