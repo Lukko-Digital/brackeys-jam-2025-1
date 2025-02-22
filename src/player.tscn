@@ -10,13 +10,20 @@ size = Vector2(168, 174)
 [node name="Player" instance=ExtResource("1_ccr6s")]
 script = ExtResource("1_t7p4v")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+[node name="InteractRay" type="RayCast2D" parent="." index="1"]
+unique_name_in_owner = true
+target_position = Vector2(0, 128)
+collision_mask = 4
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 shape = SubResource("RectangleShape2D_m2urb")
 
-[node name="Player" type="Sprite2D" parent="." index="2"]
+[node name="Player" type="Sprite2D" parent="." index="3"]
 position = Vector2(17, -42)
 texture = ExtResource("1_qlaae")
 
-[node name="CoyoteTimer" type="Timer" parent="." index="3"]
+[node name="CoyoteTimer" type="Timer" parent="." index="4"]
 unique_name_in_owner = true
 one_shot = true

@@ -3,6 +3,7 @@ class_name Player
 
 const COYOTE_TIME = 0.1
 
+@onready var interact_ray: RayCast2D = $InteractRay
 @onready var coyote_timer: Timer = %CoyoteTimer
 
 var buffered_input: String = ""
@@ -15,6 +16,11 @@ func movement_ended():
 	super()
 	if not coyote_timer.is_stopped():
 		move(buffered_input)
+
+func move(dir: String) -> bool:
+	interact_ray.target_position = INPUTS[dir] * Global.TILE_SIZE
+	interact_ray.force_raycast_update()
+	return super(dir)
 
 func move_input(dir: String):
 	coyote_timer.start()
