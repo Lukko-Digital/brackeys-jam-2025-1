@@ -152,11 +152,7 @@ position = Vector2(15, 0)
 sprite_frames = SubResource("SpriteFrames_l2ibq")
 animation = &"idle"
 autoplay = "idle"
-<<<<<<< HEAD:src/player.tscn
-frame_progress = 0.777237
-=======
 frame_progress = 0.718217
->>>>>>> ada1571ecdcb954d2450996bd4da9d8fbedc59ce:src/player/player.tscn
 
 [node name="PlayerGlow" type="Sprite2D" parent="." index="7"]
 modulate = Color(1, 1, 1, 0.505882)
@@ -169,9 +165,5 @@ unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_bonjs")
 animation = &"right"
 autoplay = "down"
-<<<<<<< HEAD:src/player.tscn
-frame_progress = 0.91083
-=======
 frame_progress = 0.592046
 offset = Vector2(15, 0)
->>>>>>> ada1571ecdcb954d2450996bd4da9d8fbedc59ce:src/player/player.tscn

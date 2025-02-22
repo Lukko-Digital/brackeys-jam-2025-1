@@ -1,14 +1,11 @@
-<<<<<<< HEAD
-[gd_scene load_steps=18 format=4 uid="uid://v2ewo3rlxyb0"]
+[gd_scene load_steps=16 format=4 uid="uid://v2ewo3rlxyb0"]
 
 [ext_resource type="Texture2D" uid="uid://dlqw0qw6xep5s" path="res://assets/environment/floor-inset-tileset.png" id="1_871uy"]
 [ext_resource type="Texture2D" uid="uid://cb06m6x1ilaif" path="res://assets/environment/bg.png" id="1_pi5ho"]
-[ext_resource type="PackedScene" uid="uid://jqd3vdbka4dr" path="res://src/player.tscn" id="1_x5b67"]
+[ext_resource type="PackedScene" uid="uid://jqd3vdbka4dr" path="res://src/player/player.tscn" id="1_x5b67"]
 [ext_resource type="Texture2D" uid="uid://p66eqnj8av28" path="res://assets/environment/floor-tileset.png" id="3_ewewc"]
 [ext_resource type="TileSet" uid="uid://b76syh2ohmwnl" path="res://src/tilesets/walkable_tileset.tres" id="3_xhxkg"]
-[ext_resource type="PackedScene" path="res://src/variable.tscn" id="4_0ltic"]
 [ext_resource type="Texture2D" uid="uid://depcwlocbww81" path="res://assets/environment/screen-tileset.png" id="4_v7g2x"]
-[ext_resource type="PackedScene" uid="uid://b5u657gc8khdl" path="res://src/dialogue/interactable_component.tscn" id="5_4k02u"]
 [ext_resource type="Texture2D" uid="uid://3phhvb4dx0wr" path="res://assets/environment/screen-topper-tileset.png" id="5_plc5o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d8lun"]
@@ -33,13 +30,6 @@ texture_region_size = Vector2i(256, 256)
 [sub_resource type="TileSet" id="TileSet_sdq3l"]
 tile_size = Vector2i(256, 256)
 sources/1 = SubResource("TileSetAtlasSource_d8lun")
-=======
-[gd_scene load_steps=6 format=4 uid="uid://v2ewo3rlxyb0"]
-
-[ext_resource type="PackedScene" uid="uid://jqd3vdbka4dr" path="res://src/player/player.tscn" id="1_x5b67"]
-[ext_resource type="Texture2D" uid="uid://p66eqnj8av28" path="res://assets/environment/floor-tileset.png" id="3_ewewc"]
-[ext_resource type="TileSet" uid="uid://b76syh2ohmwnl" path="res://src/tilesets/walkable_tileset.tres" id="3_xhxkg"]
->>>>>>> ada1571ecdcb954d2450996bd4da9d8fbedc59ce
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_40t2f"]
 texture = ExtResource("3_ewewc")
@@ -144,4 +134,3 @@ tile_set = SubResource("TileSet_31w4f")
 
 [node name="Player" parent="." instance=ExtResource("1_x5b67")]
 position = Vector2(768, 0)
-collision_layer = 1
