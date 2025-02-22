@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=4 uid="uid://v2ewo3rlxyb0"]
+[gd_scene load_steps=6 format=4 uid="uid://v2ewo3rlxyb0"]
 
 [ext_resource type="PackedScene" uid="uid://kl4ar0k3sgoi" path="res://src/player.tscn" id="1_x5b67"]
-[ext_resource type="Script" path="res://src/player.gd" id="2_a52gq"]
 [ext_resource type="Texture2D" uid="uid://p66eqnj8av28" path="res://assets/environment/floor-tileset.png" id="3_ewewc"]
 [ext_resource type="TileSet" uid="uid://b76syh2ohmwnl" path="res://src/tilesets/walkable_tileset.tres" id="3_xhxkg"]
 
@@ -47,4 +46,3 @@ tile_map_data = PackedByteArray("AAAAAP//AAABAAEAAAAAAAAAAAACAAEAAAD//wAAAAACAAI
 tile_set = ExtResource("3_xhxkg")
 
 [node name="Player" parent="." instance=ExtResource("1_x5b67")]
-script = ExtResource("2_a52gq")
