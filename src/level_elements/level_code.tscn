@@ -1,21 +1,35 @@
-[gd_scene load_steps=2 format=3 uid="uid://dsdm7rn4ry00q"]
+[gd_scene load_steps=6 format=3 uid="uid://dsdm7rn4ry00q"]
 
+[ext_resource type="FontFile" uid="uid://fefrpsn8tt06" path="res://assets/fonts/CourierPrime-Regular.ttf" id="1_5tn5b"]
 [ext_resource type="Script" path="res://src/level_elements/level_code.gd" id="1_prf15"]
+[ext_resource type="FontFile" uid="uid://dxubynnysttya" path="res://assets/fonts/CourierPrime-Italic.ttf" id="2_6lvpo"]
+[ext_resource type="FontFile" uid="uid://tj10pbt23bm4" path="res://assets/fonts/CourierPrime-BoldItalic.ttf" id="3_cwxue"]
+[ext_resource type="FontFile" uid="uid://of6ks7jj2ut8" path="res://assets/fonts/CourierPrime-Bold.ttf" id="4_1kepl"]
 
 [node name="LevelCode" type="RichTextLabel"]
-offset_left = -1721.0
-offset_top = -744.0
-offset_right = -722.0
-offset_bottom = 747.0
-theme_override_font_sizes/normal_font_size = 60
+offset_right = 999.0
+offset_bottom = 1491.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_5tn5b")
+theme_override_fonts/italics_font = ExtResource("2_6lvpo")
+theme_override_fonts/bold_italics_font = ExtResource("3_cwxue")
+theme_override_fonts/bold_font = ExtResource("4_1kepl")
+theme_override_font_sizes/bold_italics_font_size = 50
+theme_override_font_sizes/italics_font_size = 50
+theme_override_font_sizes/mono_font_size = 50
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 50
 bbcode_enabled = true
+scroll_active = false
 script = ExtResource("1_prf15")
-raw_code = "func startProgram() {
+raw_code = "
 
-	// I think we need one of these
- // to start the game?
+func startProgram() {
+  // I think we need one of these
+  // to start the game?
 
- isStarted = true;
+  isStarted = true;
  // should this be a local
  // variable
 
@@ -24,4 +38,5 @@ raw_code = "func startProgram() {
 
  return isStarted;
 }"
-yellow_variable = "isStarted"
+red_variable_name = "isStarted"
+green_variable_name = null
