@@ -16,3 +16,7 @@ shape = SubResource("RectangleShape2D_m2urb")
 [node name="Player" type="Sprite2D" parent="." index="2"]
 position = Vector2(17, -42)
 texture = ExtResource("1_qlaae")
+
+[node name="CoyoteTimer" type="Timer" parent="." index="3"]
+unique_name_in_owner = true
+one_shot = true
