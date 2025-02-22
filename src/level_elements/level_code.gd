@@ -13,7 +13,6 @@ class_name LevelCode
 @export var green_variable_name: String
 @export var blue_variable_name: String
 
-const LINE_HEIGHT = 83
 const LINE_SCROLL_TIME = 0.2
 
 const VariableColors = {
@@ -23,13 +22,16 @@ const VariableColors = {
 	BLUE = "#0000FF",
 }
 
+var line_height: float
+
 func _ready():
+	line_height = get_theme_font("font", "font_height").get_height()
 	color_code()
 
 func advance_line():
 	var scroll_bar = get_v_scroll_bar()
 	var tween: Tween = create_tween()
-	tween.tween_property(scroll_bar, "value", scroll_bar.value + LINE_HEIGHT, LINE_SCROLL_TIME)
+	tween.tween_property(scroll_bar, "value", scroll_bar.value + line_height, LINE_SCROLL_TIME)
 	
 func color_code():
 	clear()
