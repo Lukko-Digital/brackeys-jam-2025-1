@@ -2,6 +2,8 @@ extends Area2D
 class_name Moveable
 
 const MOVE_LERP_SPEED = 20
+# Threshold between current position and target position that the moveable with stop moving if within
+const MOVE_DISTANCE_THRESHOLD = 2
 
 @onready var movement_ray: RayCast2D = %MovementRay
 
@@ -20,8 +22,12 @@ func _ready() -> void:
 
 
 func _process(delta):
-	if position != target_position:
+	if is_moving():
 		position = position.lerp(target_position, MOVE_LERP_SPEED * delta)
+
+
+func is_moving() -> bool:
+	return abs(position.distance_to(target_position)) > MOVE_DISTANCE_THRESHOLD
 
 
 func move(dir: String) -> bool:
