@@ -1,7 +1,7 @@
 extends Area2D
 class_name Moveable
 
-const MOVE_LERP_SPEED = 20
+const MOVE_LERP_SPEED = 25
 # Threshold between current position and target position that the moveable with stop moving if within
 const MOVE_DISTANCE_THRESHOLD = 2
 
