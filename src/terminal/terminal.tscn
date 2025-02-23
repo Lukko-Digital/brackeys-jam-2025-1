@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7gquy2qpnhnn"]
+
+[ext_resource type="Texture2D" uid="uid://7ixyxkds68hc" path="res://assets/terminal/windows.jpg" id="1_48sus"]
+[ext_resource type="Script" path="res://src/terminal/terminal.gd" id="2_6r6cu"]
+[ext_resource type="FontFile" uid="uid://bm0suo67y0cgn" path="res://assets/fonts/Hack-Regular.ttf" id="3_i04eo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_441xu"]
+font = ExtResource("3_i04eo")
+font_size = 14
+
+[node name="Terminal" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -903.0
+offset_bottom = -530.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_48sus")
+expand_mode = 1
+stretch_mode = 4
+script = ExtResource("2_6r6cu")
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1.0
+offset_top = 33.0
+offset_right = 41.0
+offset_bottom = 56.0
+text = "Brackeys Game Jam [Version 2025.1]
+(b) Lukko Digital. All rights reserved.
+
+"
+label_settings = SubResource("LabelSettings_441xu")
