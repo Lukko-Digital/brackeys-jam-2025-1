@@ -75,9 +75,11 @@ func parse_code_line(line: String):
 		if tos > -1:
 			move_pointer_n_lines(tos - current_line - 1, LINE_ADVANCE_TIME)
 		if tos == -1:
-			var next_line = raw_code_array[current_line + 1].split(" ")
+			var next_line = raw_code_array[current_line + 1].strip_edges().split(" ")
+			print(next_line)
 			if next_line[0] == "else":
 				advance_after_next_closed_curly()
+				print("asdfasdfasdfasdfasdf")
 
 	elif tokens[0] == "else":
 		stack.append(-2)
@@ -88,6 +90,7 @@ func parse_code_line(line: String):
 
 	
 func evaluate_expression(expression: String):
+	expression = expression.replace(";", "")
 	if expression.is_valid_int():
 		return expression.to_int()
 	elif expression == "true":
@@ -107,6 +110,8 @@ func evalute_if_line(tokens: Array[String]):
 func evalute_while_line(tokens: Array[String]):
 	if vairables[tokens[1]].value == evaluate_expression(tokens[3]):
 		stack.append(current_line)
+	else:
+		advance_after_next_closed_curly()
 
 func move_pointer_n_lines(lines: int, time: float):
 	var tween: Tween = create_tween()
@@ -119,7 +124,7 @@ func move_pointer_n_lines(lines: int, time: float):
 	)
 
 func advance_after_next_closed_curly():
-	var curly_idx = current_line
+	var curly_idx = current_line + 1
 	while "}" not in raw_code_array[curly_idx]:
 		curly_idx += 1
 		if curly_idx >= raw_code_array.size():
