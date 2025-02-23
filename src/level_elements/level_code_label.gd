@@ -18,10 +18,15 @@ var line_height: float
 func _ready():
 	line_height = get_theme_font("normal_font").get_height(get_theme_font_size("normal_font_size"))
 
-func scroll_one_line(time: float):
+func scroll_down(lines: int, time: float):
 	var scroll_bar = get_v_scroll_bar()
 	var tween: Tween = create_tween()
-	tween.tween_property(scroll_bar, "value", scroll_bar.value + line_height, time)
+	tween.tween_property(
+		scroll_bar,
+		"value",
+		scroll_bar.value + lines * line_height,
+		time
+	)
 	
 func set_code_with_color(
 	raw_code: String,

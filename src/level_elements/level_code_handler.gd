@@ -45,15 +45,21 @@ func advance_line():
 	current_line += 1
 	if top_line + label.get_visible_line_count() < label.get_line_count() - label.PADDING_LINES:
 		top_line += 1
-		label.scroll_one_line(LINE_ADVANCE_TIME)
+		label.scroll_down(1, LINE_ADVANCE_TIME)
 	else:
-		advance_pointer(LINE_ADVANCE_TIME)
+		advance_pointer(1, LINE_ADVANCE_TIME)
 
-func advance_pointer(time: float):
+func jump_down_to_line(line: int):
+	var lines_to_bottom = label.get_line_count() - label.PADDING_LINES - top_line - label.get_visible_line_count()
+	if lines_to_scroll > 0:
+		label.scroll_down(lines_to_scroll, LINE_ADVANCE_TIME)
+		top_line += lines_to_scroll
+
+func advance_pointer(lines: int, time: float):
 	var tween: Tween = create_tween()
 	tween.tween_property(
 		current_line_pointer,
 		"position",
-		Vector2(current_line_pointer.position.x, current_line_pointer.position.y + label.line_height),
+		Vector2(current_line_pointer.position.x, current_line_pointer.position.y + (lines * label.line_height)),
 		time
 	)
