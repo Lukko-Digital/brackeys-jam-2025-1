@@ -1,11 +1,50 @@
-[gd_scene load_steps=5 format=3 uid="uid://hft450rf86d7"]
+[gd_scene load_steps=10 format=3 uid="uid://hft450rf86d7"]
 
 [ext_resource type="PackedScene" uid="uid://cqclrtr33c78n" path="res://src/moveable.tscn" id="1_8w2qr"]
 [ext_resource type="Script" path="res://src/variables/integer_variable.gd" id="2_dl1nd"]
-[ext_resource type="Texture2D" uid="uid://chva80djaftd3" path="res://icon.svg" id="2_rgn16"]
+[ext_resource type="Texture2D" uid="uid://crguqs7h6tpd3" path="res://assets/level_elements/variables/int_blue.png" id="3_xtfv5"]
+[ext_resource type="Texture2D" uid="uid://df17jem6q7npw" path="res://assets/level_elements/variables/int_green.png" id="4_03m3q"]
+[ext_resource type="Texture2D" uid="uid://bvt6tlkduswgs" path="res://assets/level_elements/variables/int_red.png" id="5_o72ko"]
+[ext_resource type="Texture2D" uid="uid://bkf3o3xtbp2b7" path="res://assets/level_elements/variables/int_yellow.png" id="6_gorvw"]
+[ext_resource type="FontFile" uid="uid://of6ks7jj2ut8" path="res://assets/fonts/CourierPrime-Bold.ttf" id="7_lmmgr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tf1me"]
 size = Vector2(180, 180)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f1clv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_xtfv5")
+}],
+"loop": true,
+"name": &"blue",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_03m3q")
+}],
+"loop": true,
+"name": &"green",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_o72ko")
+}],
+"loop": true,
+"name": &"red",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_gorvw")
+}],
+"loop": true,
+"name": &"yellow",
+"speed": 5.0
+}]
 
 [node name="IntegerVariable" instance=ExtResource("1_8w2qr")]
 script = ExtResource("2_dl1nd")
@@ -13,16 +52,25 @@ script = ExtResource("2_dl1nd")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 shape = SubResource("RectangleShape2D_tf1me")
 
-[node name="Sprite2D" type="Sprite2D" parent="." index="2"]
-texture = ExtResource("2_rgn16")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="2"]
+position = Vector2(0, -25)
+scale = Vector2(1.11852, 1.11852)
+sprite_frames = SubResource("SpriteFrames_f1clv")
+animation = &"blue"
 
 [node name="Label" type="Label" parent="." index="3"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -78.0
+offset_top = -102.0
+offset_right = -18.0
+offset_bottom = -33.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(2.40372, 1.72205)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_lmmgr")
 theme_override_font_sizes/font_size = 50
 text = "1"
 horizontal_alignment = 1
