@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://v2ewo3rlxyb0"]
+[gd_scene load_steps=19 format=4 uid="uid://v2ewo3rlxyb0"]
 
 [ext_resource type="Texture2D" uid="uid://dlqw0qw6xep5s" path="res://assets/environment/floor-inset-tileset.png" id="1_871uy"]
 [ext_resource type="Texture2D" uid="uid://cb06m6x1ilaif" path="res://assets/environment/bg.png" id="1_pi5ho"]
@@ -7,7 +7,9 @@
 [ext_resource type="TileSet" uid="uid://b76syh2ohmwnl" path="res://src/tilesets/walkable_tileset.tres" id="3_xhxkg"]
 [ext_resource type="Texture2D" uid="uid://depcwlocbww81" path="res://assets/environment/screen-tileset.png" id="4_v7g2x"]
 [ext_resource type="Texture2D" uid="uid://3phhvb4dx0wr" path="res://assets/environment/screen-topper-tileset.png" id="5_plc5o"]
-[ext_resource type="PackedScene" uid="uid://dor0wlwg3i56u" path="res://src/level_elements/level_code_handler.tscn" id="7_1mu8l"]
+[ext_resource type="PackedScene" uid="uid://ve1tsh8w1s8k" path="res://src/level_elements/adder_tile.tscn" id="5_wjxib"]
+[ext_resource type="PackedScene" path="res://src/level_elements/level_code_handler.tscn" id="7_1mu8l"]
+[ext_resource type="PackedScene" uid="uid://hft450rf86d7" path="res://src/variables/integer_variable.tscn" id="9_xxgyw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d8lun"]
 texture = ExtResource("1_871uy")
@@ -148,6 +150,8 @@ position = Vector2(-128, -128)
 tile_map_data = PackedByteArray("AAAAAP//AAABAAEAAAAAAAAAAAACAAEAAAD//wAAAAACAAIAAAD/////AAAAAAEAAAD+/wAAAAACAAIAAAD+////AAABAAIAAAAAAAEAAAABAAMAAAD//wEAAAABAAEAAAD+/wEAAAAAAAEAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAACAP//AAABAAIAAAD9////AAAAAAIAAAD+//7/AAACAAEAAAABAP7/AAAAAAMAAAACAP7/AAACAAEAAAAAAP3/AAACAAEAAAD///3/AAACAAIAAAD+//3/AAABAAMAAAD9/wAAAAAAAAMAAAABAP3/AAAAAAIAAAA=")
 tile_set = ExtResource("3_xhxkg")
 
+[node name="AdderTile" parent="Level/Playable" instance=ExtResource("5_wjxib")]
+
 [node name="Screen2" type="Node2D" parent="Level"]
 
 [node name="Floor-Inset" type="TileMapLayer" parent="Level/Screen2"]
@@ -172,6 +176,9 @@ tile_set = SubResource("TileSet_31w4f")
 [node name="LevelCodeHandler" parent="Level/Screen2" instance=ExtResource("7_1mu8l")]
 offset_left = -4.0
 offset_right = -4.0
+
+[node name="IntegerVariable" parent="Level" instance=ExtResource("9_xxgyw")]
+position = Vector2(252, -10)
 
 [node name="Player" parent="." instance=ExtResource("1_x5b67")]
 position = Vector2(768, 0)

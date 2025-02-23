@@ -53,6 +53,7 @@ func move_input(dir: String):
 
 	if not is_moving:
 		move(dir)
+		Global.turn_advanced.emit()
 
 ## ------------------ ANIMATION ------------------
 
