@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ve1tsh8w1s8k"]
 
 [ext_resource type="Script" path="res://src/level_elements/adder_tile.gd" id="1_kde0d"]
-[ext_resource type="PackedScene" uid="uid://c3eyvwf3lfas2" path="res://src/level_elements/tile.tscn" id="1_qoaua"]
+[ext_resource type="PackedScene" uid="uid://cmfkijt3imdyw" path="res://src/level_elements/tile.tscn" id="1_qoaua"]
 
 [node name="AdderTile" instance=ExtResource("1_qoaua")]
 script = ExtResource("1_kde0d")
