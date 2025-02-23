@@ -87,10 +87,10 @@ grow_vertical = 2
 script = ExtResource("1_mwecv")
 raw_code = "func startProgram {
 
- // I think we need one of these
- // to start the game?
+	// I think we need one of these
+	// to start the game?
 
- isStarted = true;
+	isStarted = true;
 	
 	if isStarted == true {
 	// something
@@ -99,13 +99,13 @@ raw_code = "func startProgram {
 	// something else
 	}
 
- // should this be a local
- // variable
+	// should this be a local
+	// variable
 
- // fuck this ian please
- // double check
+	// fuck this ian please
+	// double check
 
- return isStarted;
+	return isStarted;
 }"
 red_var_name = "isStarted"
 
