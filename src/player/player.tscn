@@ -123,6 +123,7 @@ animations = [{
 }]
 
 [node name="Player" instance=ExtResource("1_ccr6s")]
+y_sort_enabled = true
 script = ExtResource("1_t7p4v")
 
 [node name="InteractRay" type="RayCast2D" parent="." index="1"]
@@ -144,11 +145,11 @@ unique_name_in_owner = true
 
 [node name="PlayerGlow2" type="Sprite2D" parent="." index="5"]
 modulate = Color(1, 1, 1, 0.627451)
-position = Vector2(5.5, -5)
+position = Vector2(5.5, -52)
 texture = ExtResource("5_my7js")
 
 [node name="PlayerBody" type="AnimatedSprite2D" parent="." index="6"]
-position = Vector2(15, 0)
+position = Vector2(15, -47)
 sprite_frames = SubResource("SpriteFrames_l2ibq")
 animation = &"idle"
 autoplay = "idle"
@@ -156,12 +157,13 @@ frame_progress = 0.718217
 
 [node name="PlayerGlow" type="Sprite2D" parent="." index="7"]
 modulate = Color(1, 1, 1, 0.505882)
-position = Vector2(5.5, -5)
+position = Vector2(5.5, -52)
 scale = Vector2(0.872289, 0.872289)
 texture = ExtResource("5_my7js")
 
 [node name="PlayerEyes" type="AnimatedSprite2D" parent="." index="8"]
 unique_name_in_owner = true
+position = Vector2(0, -47)
 sprite_frames = SubResource("SpriteFrames_bonjs")
 animation = &"right"
 autoplay = "down"
