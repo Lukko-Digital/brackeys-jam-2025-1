@@ -22,21 +22,5 @@ theme_override_font_sizes/normal_font_size = 50
 theme_override_font_sizes/bold_font_size = 50
 bbcode_enabled = true
 scroll_active = false
+tab_size = 2
 script = ExtResource("1_prf15")
-raw_code = "
-
-func startProgram() {
-  // I think we need one of these
-  // to start the game?
-
-  isStarted = true;
- // should this be a local
- // variable
-
- // fuck this ian please
- // double check
-
- return isStarted;
-}"
-red_variable_name = "isStarted"
-green_variable_name = null
