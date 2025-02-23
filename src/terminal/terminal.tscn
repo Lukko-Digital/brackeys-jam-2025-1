@@ -33,3 +33,4 @@ text = "Brackeys Game Jam [Version 2025.1]
 
 "
 label_settings = SubResource("LabelSettings_441xu")
+max_lines_visible = 25

@@ -6,8 +6,14 @@ extends TextureRect
 var width = 118
 var rng = RandomNumberGenerator.new()
 
+func _process(_delta):
+	label.lines_skipped = label.get_line_count() - label.max_lines_visible
+
 func _ready():
 	await loading_bar(user_prompt + "Loading...")
+	await add_text("\n")
+
+	await add_text(FileAccess.open("res://src/player/player.tscn", FileAccess.READ).get_as_text(), 0.00001)
 
 	for i in range(10):
 		await add_text("\n")
@@ -29,7 +35,19 @@ func loading_bar(text: String):
 
 		await get_tree().create_timer(rng.randfn(0.01, 0.01)).timeout
 
-func add_text(text: String):
+func add_text(text: String, delay: float = 0.01):
+	var line_len = 0
 	for c in text:
+		line_len += 1
+
+		if c == "\n":
+			line_len = 0
+		elif line_len >= width:
+			label.text += "\n"
+			line_len = 0
+
 		label.text += c
-		await get_tree().create_timer(0.01).timeout
+		if delay < 0.01 and line_len % int(0.01 / delay) != 0:
+			continue
+
+		await get_tree().create_timer(delay).timeout
