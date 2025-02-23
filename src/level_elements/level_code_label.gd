@@ -17,10 +17,10 @@ func _ready():
 	
 func set_code_with_color(
 	raw_code_array: PackedStringArray,
-	red_var_name: String,
-	yellow_var_name: String,
-	green_var_name: String,
-	blue_var_name: String
+	red_var: Moveable,
+	yellow_var: Moveable,
+	green_var: Moveable,
+	blue_var: Moveable
 ):
 	clear()
 	for line in raw_code_array:
@@ -28,13 +28,13 @@ func set_code_with_color(
 		if "//" in line:
 			color_line = "[color=" + LineColors.COMMENT + "]" + line + "[/color]"
 		
-		elif not red_var_name.is_empty() and red_var_name in line:
+		elif red_var and red_var.variable_name in line:
 			color_line = "[bgcolor=" + LineColors.RED + "]" + color_line + "[/bgcolor]"
-		elif not yellow_var_name.is_empty() and yellow_var_name in line:
+		elif yellow_var and yellow_var.variable_name in line:
 			color_line = "[bgcolor=" + LineColors.YELLOW + "]" + color_line + "[/bgcolor]"
-		elif not green_var_name.is_empty() and green_var_name in line:
+		elif green_var and green_var.variable_name in line:
 			color_line = "[bgcolor=" + LineColors.GREEN + "]" + color_line + "[/bgcolor]"
-		elif not blue_var_name.is_empty() and blue_var_name in line:
+		elif blue_var and blue_var.variable_name in line:
 			color_line = "[bgcolor=" + LineColors.BLUE + "]" + color_line + "[/bgcolor]"
 
 		append_text(color_line + "\n")

@@ -7,6 +7,10 @@ const MOVE_DISTANCE_THRESHOLD = 2
 
 @onready var push_ray: RayCast2D = %PushRay
 
+@export var variable_name: String
+
+var value
+
 var INPUTS = {
 	"right": Vector2.RIGHT,
 	"left": Vector2.LEFT,

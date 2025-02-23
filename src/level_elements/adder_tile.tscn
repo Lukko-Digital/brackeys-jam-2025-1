@@ -1,19 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://ba4m65cx8wq6w"]
+[gd_scene load_steps=3 format=3 uid="uid://ve1tsh8w1s8k"]
 
-[ext_resource type="Texture2D" uid="uid://b0hidg5vod6l" path="res://assets/environment/walkable-tileset.png" id="1_iyuxt"]
 [ext_resource type="Script" path="res://src/level_elements/adder_tile.gd" id="1_kde0d"]
+[ext_resource type="PackedScene" uid="uid://cmfkijt3imdyw" path="res://src/level_elements/tile.tscn" id="1_qoaua"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2p1s"]
-size = Vector2(256, 256)
-
-[node name="AdderTile" type="Area2D"]
+[node name="AdderTile" instance=ExtResource("1_qoaua")]
 script = ExtResource("1_kde0d")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_m2p1s")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_iyuxt")
-hframes = 4
-vframes = 7
+[node name="Sprite2D" parent="." index="1"]
 frame = 2
