@@ -1,12 +1,15 @@
-[gd_scene load_steps=33 format=4 uid="uid://d34o7xtlhtmsj"]
+[gd_scene load_steps=33 format=4 uid="uid://v2ewo3rlxyb0"]
 
 [ext_resource type="Texture2D" uid="uid://dlqw0qw6xep5s" path="res://assets/environment/floor-inset-tileset.png" id="1_871uy"]
 [ext_resource type="Texture2D" uid="uid://cb06m6x1ilaif" path="res://assets/environment/bg.png" id="1_pi5ho"]
 [ext_resource type="PackedScene" uid="uid://jqd3vdbka4dr" path="res://src/player/player.tscn" id="1_x5b67"]
+[ext_resource type="Texture2D" uid="uid://g8etfkp4rcm5" path="res://assets/environment/bg-dark.png" id="2_s8lts"]
+[ext_resource type="Texture2D" uid="uid://b68gwysraopw8" path="res://assets/environment/disks/disk-light-2.png" id="2_xd3qk"]
 [ext_resource type="Texture2D" uid="uid://p66eqnj8av28" path="res://assets/environment/floor-tileset.png" id="3_ewewc"]
+[ext_resource type="Texture2D" uid="uid://b5ujxmhg6ya00" path="res://assets/environment/disks/disk-dark-4.png" id="3_qgygs"]
 [ext_resource type="TileSet" uid="uid://b76syh2ohmwnl" path="res://src/tilesets/walkable_tileset.tres" id="3_xhxkg"]
+[ext_resource type="Texture2D" uid="uid://btbiri0q8otmn" path="res://assets/environment/disks/disk-light-1.png" id="4_l24dg"]
 [ext_resource type="Texture2D" uid="uid://depcwlocbww81" path="res://assets/environment/screen-tileset.png" id="4_v7g2x"]
-[ext_resource type="PackedScene" uid="uid://dasp8fxadwybx" path="res://src/variables/boolean_variable.tscn" id="5_7dtvg"]
 [ext_resource type="Texture2D" uid="uid://3phhvb4dx0wr" path="res://assets/environment/screen-topper-tileset.png" id="5_plc5o"]
 [ext_resource type="Texture2D" uid="uid://b267xg2g0ssfe" path="res://assets/environment/disks/disk-dark-1.png" id="5_vs2nu"]
 [ext_resource type="Texture2D" uid="uid://dcppjfvw5bgeg" path="res://assets/environment/disks/disk-dark-2.png" id="6_x5802"]
@@ -15,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://c1djiq53l4oxk" path="res://assets/environment/disks/disk-light-3.png" id="8_ujptd"]
 [ext_resource type="Texture2D" uid="uid://0diglvgswyrq" path="res://assets/environment/disks/disk-dark-3.png" id="9_tx7bj"]
 [ext_resource type="Texture2D" uid="uid://cw0u5ul1f2dlt" path="res://assets/environment/fg_darkener.png" id="16_5may4"]
-[ext_resource type="PackedScene" uid="uid://ba4m65cx8wq6w" path="res://src/level_elements/adder_tile.tscn" id="16_iffk5"]
+[ext_resource type="PackedScene" uid="uid://ve1tsh8w1s8k" path="res://src/level_elements/adder_tile.tscn" id="16_iffk5"]
 [ext_resource type="Texture2D" uid="uid://klb0v17bo8a" path="res://assets/environment/disks/disk-fg-close.png" id="17_52uw2"]
 [ext_resource type="Texture2D" uid="uid://b3o2xngvqxqfw" path="res://assets/environment/disks/disk-fg-mid.png" id="18_emmev"]
 [ext_resource type="PackedScene" uid="uid://dlarkv7xbppoh" path="res://src/levels/level_1.tscn" id="19_eho4u"]
@@ -135,12 +138,6 @@ sources/0 = SubResource("TileSetAtlasSource_va7ri")
 
 [node name="Main" type="Node2D"]
 
-[node name="Bg" type="Sprite2D" parent="."]
-texture = ExtResource("1_pi5ho")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.5, 0.5)
-
 [node name="Level" type="Node2D" parent="."]
 position = Vector2(6912, 256)
 
@@ -234,10 +231,6 @@ tile_set = SubResource("TileSet_hs4nt")
 position = Vector2(-128, -128)
 tile_map_data = PackedByteArray("AAAAAP//AAABAAEAAAAAAAAAAAACAAEAAAD//wAAAAACAAIAAAD/////AAAAAAEAAAD+/wAAAAACAAIAAAD+////AAABAAIAAAAAAAEAAAABAAMAAAD//wEAAAABAAEAAAD+/wEAAAAAAAEAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAACAP//AAABAAIAAAD9////AAAAAAIAAAD+//7/AAACAAEAAAABAP7/AAAAAAMAAAACAP7/AAACAAEAAAAAAP3/AAACAAEAAAD///3/AAACAAIAAAD+//3/AAABAAMAAAD9/wAAAAAAAAMAAAABAP3/AAAAAAIAAAA=")
 tile_set = ExtResource("3_xhxkg")
-
-[node name="BooleanVariable" parent="Level/Playable" instance=ExtResource("5_7dtvg")]
-position = Vector2(-511, 0)
-variable_name = "isStarted"
 
 [node name="Screen2" type="Node2D" parent="Level"]
 
