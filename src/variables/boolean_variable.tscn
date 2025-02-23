@@ -97,7 +97,7 @@ script = ExtResource("2_6qovb")
 shape = SubResource("RectangleShape2D_tjdqe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="2"]
-position = Vector2(1, -16)
-scale = Vector2(0.815655, 0.815655)
+position = Vector2(1, -54)
+scale = Vector2(1.12317, 1.12317)
 sprite_frames = SubResource("SpriteFrames_lyvsu")
 animation = &"blue_false"
