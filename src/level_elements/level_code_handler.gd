@@ -71,13 +71,14 @@ func parse_code_line(line: String):
 	elif tokens[0] == "}":
 		var tos = stack.pop_back()
 		
-		if tos > -1:
+		if tos > -1: # if the "}" matches a while, go back to that line
 			move_pointer_n_lines(tos - current_line - 1, LINE_ADVANCE_TIME)
-		if tos == -1:
+		if tos == -1: # if the "}" matches an if, go to the next line and skip the else
 			var next_line = raw_code_array[current_line + 1].strip_edges().split(" ")
 			print(next_line)
 			if next_line[0] == "else":
 				advance_after_next_closed_curly()
+		# if it matches an else, do nothing
 
 	elif tokens[0] == "else":
 		stack.append(-2)
