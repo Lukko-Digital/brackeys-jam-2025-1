@@ -7,7 +7,7 @@ var width = 118
 var rng = RandomNumberGenerator.new()
 
 func _process(_delta):
-	label.lines_skipped = label.get_line_count() - label.max_lines_visible
+	label.lines_skipped = max(0, label.get_line_count() - label.max_lines_visible)
 
 func _ready():
 	await loading_bar(user_prompt + "Loading...")
