@@ -9,7 +9,10 @@ const MOVE_DISTANCE_THRESHOLD = 2
 
 @export var variable_name: String
 
-var value
+var value:
+	set(val):
+		value = val
+		$Label.text = str(value)
 
 var INPUTS = {
 	"right": Vector2.RIGHT,
