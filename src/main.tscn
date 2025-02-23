@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://v2ewo3rlxyb0"]
+[gd_scene load_steps=17 format=4 uid="uid://v2ewo3rlxyb0"]
 
 [ext_resource type="Texture2D" uid="uid://dlqw0qw6xep5s" path="res://assets/environment/floor-inset-tileset.png" id="1_871uy"]
 [ext_resource type="Texture2D" uid="uid://cb06m6x1ilaif" path="res://assets/environment/bg.png" id="1_pi5ho"]
@@ -7,6 +7,7 @@
 [ext_resource type="TileSet" uid="uid://b76syh2ohmwnl" path="res://src/tilesets/walkable_tileset.tres" id="3_xhxkg"]
 [ext_resource type="Texture2D" uid="uid://depcwlocbww81" path="res://assets/environment/screen-tileset.png" id="4_v7g2x"]
 [ext_resource type="Texture2D" uid="uid://3phhvb4dx0wr" path="res://assets/environment/screen-topper-tileset.png" id="5_plc5o"]
+[ext_resource type="PackedScene" uid="uid://dor0wlwg3i56u" path="res://src/level_elements/level_code_handler.tscn" id="7_1mu8l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d8lun"]
 texture = ExtResource("1_871uy")
@@ -26,12 +27,30 @@ texture_region_size = Vector2i(256, 256)
 1:3/0 = 0
 2:3/0 = 0
 3:3/0 = 0
+4:0/0 = 0
+4:1/0 = 0
+4:2/0 = 0
+4:3/0 = 0
+4:4/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+6:4/0 = 0
+6:3/0 = 0
+6:2/0 = 0
+6:1/0 = 0
+5:1/0 = 0
+5:0/0 = 0
+5:2/0 = 0
+5:3/0 = 0
+5:4/0 = 0
+6:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_sdq3l"]
 tile_size = Vector2i(256, 256)
 sources/1 = SubResource("TileSetAtlasSource_d8lun")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_40t2f"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cikcw"]
 texture = ExtResource("3_ewewc")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
@@ -50,12 +69,30 @@ texture_region_size = Vector2i(256, 256)
 2:3/0 = 0
 3:3/0 = 0
 0:3/0 = 0
+4:5/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+6:4/0 = 0
+6:5/0 = 0
+5:5/0 = 0
+5:2/0 = 0
+4:2/0 = 0
+4:3/0 = 0
+6:2/0 = 0
+6:1/0 = 0
+5:1/0 = 0
+4:1/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_hs4nt"]
 tile_size = Vector2i(256, 256)
-sources/0 = SubResource("TileSetAtlasSource_40t2f")
+sources/0 = SubResource("TileSetAtlasSource_cikcw")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m7sg7"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fois4"]
 texture = ExtResource("4_v7g2x")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
@@ -70,9 +107,9 @@ texture_region_size = Vector2i(256, 256)
 
 [sub_resource type="TileSet" id="TileSet_13qfq"]
 tile_size = Vector2i(256, 256)
-sources/1 = SubResource("TileSetAtlasSource_m7sg7")
+sources/1 = SubResource("TileSetAtlasSource_fois4")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8knm8"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ccm4"]
 texture = ExtResource("5_plc5o")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
@@ -81,7 +118,7 @@ texture_region_size = Vector2i(256, 256)
 
 [sub_resource type="TileSet" id="TileSet_31w4f"]
 tile_size = Vector2i(256, 256)
-sources/0 = SubResource("TileSetAtlasSource_8knm8")
+sources/0 = SubResource("TileSetAtlasSource_0ccm4")
 
 [node name="Main" type="Node2D"]
 
@@ -98,12 +135,12 @@ position = Vector2(256, 256)
 position = Vector2(768, 0)
 
 [node name="Floor-Inset" type="TileMapLayer" parent="Level/Playable"]
-position = Vector2(0, 57.37)
-tile_map_data = PackedByteArray("AAAAAAEAAQADAAMAAAD//wEAAQABAAIAAAD+/wEAAQABAAIAAAD9/wEAAQAAAAIAAAD8/wAAAQAAAAIAAAACAP//AQADAAMAAAABAP//AQAAAAIAAAABAP7/AQACAAIAAAAAAP7/AQADAAEAAAD9/wAAAQACAAIAAAA=")
+position = Vector2(0, 49.865)
+tile_map_data = PackedByteArray("AAAAAAEAAQADAAMAAAD//wEAAQABAAIAAAD+/wEAAQAFAAMAAAD9/wEAAQAAAAIAAAD8/wAAAQAAAAIAAAACAP//AQADAAMAAAABAP//AQAAAAIAAAABAP7/AQACAAIAAAAAAP7/AQADAAEAAAD9/wAAAQACAAIAAAD7//3/AQAFAAAAAAD8//3/AQAFAAAAAAD9//3/AQAGAAAAAAD+/wIAAQAFAAQAAAA=")
 tile_set = SubResource("TileSet_sdq3l")
 
 [node name="Floor" type="TileMapLayer" parent="Level/Playable"]
-tile_map_data = PackedByteArray("AAD/////AAACAAEAAAD+////AAACAAEAAAD+//7/AAACAAEAAAD///7/AAACAAEAAAD+//3/AAACAAEAAAD///3/AAACAAEAAAAAAP3/AAACAAEAAAD+/wAAAAACAAEAAAD//wAAAAACAAEAAAD9////AAACAAEAAAAAAAEAAAADAAMAAAACAP//AAADAAMAAAD9/wEAAAAAAAIAAAD8/wAAAAAAAAIAAAABAPz/AAAAAAAAAAACAP3/AAAAAAAAAAD9//z/AAABAAMAAAD9/wAAAAACAAIAAAD+/wEAAAABAAIAAAD//wEAAAABAAIAAAAAAAAAAAADAAIAAAAAAP//AAADAAIAAAAAAP7/AAADAAEAAAABAP7/AAACAAIAAAABAP//AAAAAAIAAAACAP7/AAADAAIAAAABAP3/AAACAAAAAAAAAPz/AAADAAAAAAD///z/AAADAAAAAAD+//z/AAADAAAAAAD9//3/AAABAAAAAAD9//7/AAABAAEAAAD8//7/AAABAAMAAAD8////AAABAAAAAAA=")
+tile_map_data = PackedByteArray("AAD/////AAACAAEAAAD+////AAACAAEAAAD+//7/AAACAAEAAAD///7/AAACAAEAAAD+//3/AAACAAEAAAD///3/AAACAAEAAAAAAP3/AAACAAEAAAD+/wAAAAACAAEAAAD//wAAAAACAAEAAAD9////AAACAAEAAAAAAAEAAAADAAMAAAACAP//AAADAAMAAAD9/wEAAAAAAAIAAAD8/wAAAAAAAAIAAAABAPz/AAAAAAAAAAACAP3/AAAAAAAAAAD9//z/AAABAAMAAAD9/wAAAAACAAIAAAD+/wEAAAAFAAMAAAD//wEAAAABAAIAAAAAAAAAAAADAAIAAAAAAP//AAADAAIAAAAAAP7/AAADAAEAAAABAP7/AAACAAIAAAABAP//AAAAAAIAAAACAP7/AAADAAIAAAABAP3/AAACAAAAAAAAAPz/AAAGAAUAAAD///z/AAADAAAAAAD+//z/AAADAAAAAAD9//3/AAAGAAAAAAD9//7/AAABAAEAAAD8//7/AAABAAMAAAD8////AAABAAAAAAD8//3/AAAFAAAAAAD7//3/AAAFAAAAAAD6//3/AAAEAAAAAAAAAPv/AAAGAAQAAAAAAPr/AAAGAAQAAAD+/wMAAAAFAAQAAAD+/wIAAAAFAAQAAAA=")
 tile_set = SubResource("TileSet_hs4nt")
 
 [node name="Walkable" type="TileMapLayer" parent="Level/Playable"]
@@ -114,12 +151,12 @@ tile_set = ExtResource("3_xhxkg")
 [node name="Screen2" type="Node2D" parent="Level"]
 
 [node name="Floor-Inset" type="TileMapLayer" parent="Level/Screen2"]
-position = Vector2(0, 68.05)
-tile_map_data = PackedByteArray("AAD5/wEAAQABAAIAAAD6/wEAAQABAAIAAAD7/wEAAQABAAIAAAD8/wEAAQABAAIAAAD4/wEAAQAAAAIAAAD9/wEAAQADAAMAAAA=")
+position = Vector2(0, 48.725)
+tile_map_data = PackedByteArray("AAD5/wEAAQABAAIAAAD6/wEAAQABAAIAAAD7/wEAAQABAAIAAAD8/wEAAQABAAIAAAD4/wEAAQAAAAIAAAD9/wEAAQADAAMAAAD9//3/AQAEAAAAAAA=")
 tile_set = SubResource("TileSet_sdq3l")
 
 [node name="ScreenFloor" type="TileMapLayer" parent="Level/Screen2"]
-tile_map_data = PackedByteArray("AAD5//3/AAACAAEAAAD5//7/AAACAAEAAAD5////AAACAAEAAAD5/wAAAAACAAEAAAD6/wAAAAACAAEAAAD6////AAACAAEAAAD6//7/AAACAAEAAAD6//3/AAACAAEAAAD4/wEAAAAAAAIAAAD5/wEAAAABAAIAAAD6/wEAAAABAAIAAAD7/wEAAAABAAIAAAD7/wAAAAACAAEAAAD7////AAACAAEAAAD7//7/AAACAAEAAAD7//3/AAACAAEAAAD7//z/AAACAAEAAAD6//z/AAACAAEAAAD5//z/AAACAAEAAAD4//z/AAABAAAAAAD4//3/AAABAAAAAAD4//7/AAABAAAAAAD4////AAABAAAAAAD4/wAAAAABAAAAAAD8//z/AAACAAEAAAD8//3/AAACAAEAAAD8//7/AAACAAEAAAD8////AAACAAEAAAD8/wAAAAACAAEAAAD8/wEAAAABAAIAAAD9//z/AAADAAIAAAD9//3/AAADAAIAAAD9//7/AAADAAIAAAD9////AAADAAIAAAD9/wAAAAADAAIAAAD9/wEAAAADAAMAAAD4//v/AAABAAMAAAD5//v/AAADAAAAAAD6//v/AAADAAAAAAD7//v/AAADAAAAAAD8//v/AAADAAAAAAD9//v/AAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAD5//3/AAACAAEAAAD5//7/AAACAAEAAAD5////AAACAAEAAAD5/wAAAAACAAEAAAD6/wAAAAACAAEAAAD6////AAACAAEAAAD6//7/AAACAAEAAAD6//3/AAACAAEAAAD4/wEAAAAAAAIAAAD5/wEAAAABAAIAAAD6/wEAAAABAAIAAAD7/wEAAAABAAIAAAD7/wAAAAACAAEAAAD7////AAACAAEAAAD7//7/AAACAAEAAAD7//3/AAACAAEAAAD7//z/AAACAAEAAAD6//z/AAACAAEAAAD5//z/AAACAAEAAAD4//z/AAABAAAAAAD4//3/AAABAAAAAAD4//7/AAABAAAAAAD4////AAABAAAAAAD4/wAAAAABAAAAAAD8//z/AAACAAEAAAD8//3/AAACAAEAAAD8//7/AAACAAEAAAD8////AAACAAEAAAD8/wAAAAACAAEAAAD8/wEAAAABAAIAAAD9//z/AAADAAIAAAD9//3/AAAEAAAAAAD9//7/AAADAAIAAAD9////AAADAAIAAAD9/wAAAAADAAIAAAD9/wEAAAADAAMAAAD4//v/AAABAAMAAAD5//v/AAADAAAAAAD6//v/AAADAAAAAAD7//v/AAADAAAAAAD8//v/AAADAAAAAAD9//v/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_hs4nt")
 
 [node name="Screen" type="TileMapLayer" parent="Level/Screen2"]
@@ -131,6 +168,10 @@ tile_set = SubResource("TileSet_13qfq")
 position = Vector2(-128, -128)
 tile_map_data = PackedByteArray("AAD5//z/AAAAAAAAAAD6//z/AAABAAAAAAD7//z/AAABAAAAAAD8//z/AAABAAAAAAD9//z/AAACAAAAAAA=")
 tile_set = SubResource("TileSet_31w4f")
+
+[node name="LevelCodeHandler" parent="Level/Screen2" instance=ExtResource("7_1mu8l")]
+offset_left = -4.0
+offset_right = -4.0
 
 [node name="Player" parent="." instance=ExtResource("1_x5b67")]
 position = Vector2(768, 0)
