@@ -1,7 +1,9 @@
+@tool
 extends RichTextLabel
 class_name LevelCodeLabel
 
-const LINE_SCROLL_TIME = 0.2
+# Extra lines added to the top and bottom
+const PADDING_LINES = 2
 
 const LineColors = {
 	COMMENT = "#000000BB",
@@ -14,12 +16,12 @@ const LineColors = {
 var line_height: float
 
 func _ready():
-	line_height = get_theme_font("font", "font_height").get_height()
+	line_height = get_theme_font("normal_font").get_height(get_theme_font_size("normal_font_size"))
 
-func advance_line():
+func scroll_one_line(time: float):
 	var scroll_bar = get_v_scroll_bar()
 	var tween: Tween = create_tween()
-	tween.tween_property(scroll_bar, "value", scroll_bar.value + line_height, LINE_SCROLL_TIME)
+	tween.tween_property(scroll_bar, "value", scroll_bar.value + line_height, time)
 	
 func set_code_with_color(
 	raw_code: String,
@@ -29,7 +31,7 @@ func set_code_with_color(
 	blue_var_name: String
 ):
 	clear()
-	var lines = raw_code.split("\n")
+	var lines = ("\n".repeat(PADDING_LINES) + raw_code + "\n".repeat(PADDING_LINES)).split("\n")
 	for line in lines:
 		var color_line = line
 		if "//" in line:

@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://jqd3vdbka4dr" path="res://src/player/player.tscn" id="1_x5b67"]
 [ext_resource type="Texture2D" uid="uid://p66eqnj8av28" path="res://assets/environment/floor-tileset.png" id="3_ewewc"]
 [ext_resource type="TileSet" uid="uid://b76syh2ohmwnl" path="res://src/tilesets/walkable_tileset.tres" id="3_xhxkg"]
-[ext_resource type="PackedScene" uid="uid://dsdm7rn4ry00q" path="res://src/level_elements/level_code_label.tscn" id="4_gnltu"]
 [ext_resource type="Texture2D" uid="uid://depcwlocbww81" path="res://assets/environment/screen-tileset.png" id="4_v7g2x"]
 [ext_resource type="Texture2D" uid="uid://3phhvb4dx0wr" path="res://assets/environment/screen-topper-tileset.png" id="5_plc5o"]
+[ext_resource type="PackedScene" uid="uid://dor0wlwg3i56u" path="res://src/level_elements/level_code_handler.tscn" id="7_1mu8l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d8lun"]
 texture = ExtResource("1_871uy")
@@ -50,7 +50,7 @@ texture_region_size = Vector2i(256, 256)
 tile_size = Vector2i(256, 256)
 sources/1 = SubResource("TileSetAtlasSource_d8lun")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_40t2f"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cikcw"]
 texture = ExtResource("3_ewewc")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
@@ -90,9 +90,9 @@ texture_region_size = Vector2i(256, 256)
 
 [sub_resource type="TileSet" id="TileSet_hs4nt"]
 tile_size = Vector2i(256, 256)
-sources/0 = SubResource("TileSetAtlasSource_40t2f")
+sources/0 = SubResource("TileSetAtlasSource_cikcw")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m7sg7"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fois4"]
 texture = ExtResource("4_v7g2x")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
@@ -107,9 +107,9 @@ texture_region_size = Vector2i(256, 256)
 
 [sub_resource type="TileSet" id="TileSet_13qfq"]
 tile_size = Vector2i(256, 256)
-sources/1 = SubResource("TileSetAtlasSource_m7sg7")
+sources/1 = SubResource("TileSetAtlasSource_fois4")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8knm8"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ccm4"]
 texture = ExtResource("5_plc5o")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
@@ -118,7 +118,7 @@ texture_region_size = Vector2i(256, 256)
 
 [sub_resource type="TileSet" id="TileSet_31w4f"]
 tile_size = Vector2i(256, 256)
-sources/0 = SubResource("TileSetAtlasSource_8knm8")
+sources/0 = SubResource("TileSetAtlasSource_0ccm4")
 
 [node name="Main" type="Node2D"]
 
@@ -169,12 +169,9 @@ position = Vector2(-128, -128)
 tile_map_data = PackedByteArray("AAD5//z/AAAAAAAAAAD6//z/AAABAAAAAAD7//z/AAABAAAAAAD8//z/AAABAAAAAAD9//z/AAACAAAAAAA=")
 tile_set = SubResource("TileSet_31w4f")
 
+[node name="LevelCodeHandler" parent="Level/Screen2" instance=ExtResource("7_1mu8l")]
+offset_left = -4.0
+offset_right = -4.0
+
 [node name="Player" parent="." instance=ExtResource("1_x5b67")]
 position = Vector2(768, 0)
-
-[node name="LevelCodeLabel" parent="." instance=ExtResource("4_gnltu")]
-offset_left = -1472.0
-offset_top = -817.0
-offset_right = -462.0
-offset_bottom = 567.0
-green_variable_name = ""
