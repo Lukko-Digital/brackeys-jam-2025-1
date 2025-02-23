@@ -58,11 +58,10 @@ func init_pointer():
 func advance_code():
 	move_pointer_n_lines(1, LINE_ADVANCE_TIME)
 	parse_code_line(raw_code_array[current_line])
-	print(raw_code_array[current_line], stack)
 
 
 func parse_code_line(line: String):
-	var tokens = line.strip_edges().split(" ")
+	var tokens = line.strip_edges().replace(";", "").split(" ")
 	if tokens[0] == "if":
 		evalute_if_line(tokens)
 	elif tokens[0] == "while":
@@ -79,7 +78,6 @@ func parse_code_line(line: String):
 			print(next_line)
 			if next_line[0] == "else":
 				advance_after_next_closed_curly()
-				print("asdfasdfasdfasdfasdf")
 
 	elif tokens[0] == "else":
 		stack.append(-2)
@@ -90,7 +88,7 @@ func parse_code_line(line: String):
 
 	
 func evaluate_expression(expression: String):
-	expression = expression.replace(";", "")
+	expression = expression
 	if expression.is_valid_int():
 		return expression.to_int()
 	elif expression == "true":
